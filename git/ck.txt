@@ -40,6 +40,7 @@ git push -u origin "master"
     git remote add github git@github.com:1231234448/gongzuo.git
     拉取新仓库的数据
     git fetch origin
+    git fetch github
     git add .
     查看状态
     git status  
@@ -51,6 +52,8 @@ git push -u origin "master"
     git push
     git push github
     git push -u github "main"
+    远程库同步到本地库
+    git pull --rebase github main
         第二种方式：
     当前仓库配置信息：
     git remote -v
@@ -60,10 +63,13 @@ git push -u origin "master"
     添加仓库 指定代码仓库的别名
     git remote add github git@github.com:1231234448/xuexi.git
     git remote add github git@github.com:1231234448/gongzuo.git
+    当前仓库配置信息：
+    git remote -v
     查看状态
     git status
     拉取新仓库的数据
     git fetch origin
+    git fetch github
     git add .
     提交代码到本地缓冲区
     git commit -a -m '更新'
@@ -73,6 +79,30 @@ git push -u origin "master"
     git push
     git push github
     git push -u github "main"
+        第三种方法：
+    当前仓库配置信息：
+    git remote -v
+    添加仓库 指定代码仓库的别名
+    git remote add github git@github.com:1231234448/xuexi.git
+    git remote add github git@github.com:1231234448/gongzuo.git
+    当前仓库配置信息：
+    git remote -v
+    查看状态
+    git status
+    拉取新仓库的数据
+    git fetch origin
+    git fetch github
+    git add .
+    跟新分支
+    git status
+    git commit -a -m '更新'
+    git push
+    签出新仓库的main分支代码
+    git checkout -b github_main github/main
+    git checkout -b origin_main origin/main
+    合并老分支的代码并提交
+    git merge main
+    git push github HEAD:main
 }
 
 
@@ -97,3 +127,7 @@ git push --set-upstream origin master
 fatal: Could not read from remote repository.的解决办法
 查看远端地址 git remote –v 
 查看配置 git config --list
+
+failed to push some refs to
+远程库同步到本地库
+git pull --rebase github main
