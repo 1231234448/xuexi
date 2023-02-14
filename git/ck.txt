@@ -44,15 +44,27 @@ $ git commit -a -m 'for testing'
 将代码推到仓库
 $ git push
 
+{
+多仓库管理及代码同步
 同步git
 手动打开 bush
 
 当前仓库配置信息：
-$ git remote -v
+git remote -v
 添加仓库 指定代码仓库的别名
-$ git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
-$ git fetch origin
+git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
+拉取新仓库的数据
+git fetch origin
+查看状态
+git status
+提交代码到本地缓冲区
+git commit -a -m 'for testing'
+推送
+git push
+git push github
 $ git push -u github "main"
+}
+
 
 git push --set-upstream origin master的原因以及解决方法
 这是因为本地的分支没有和远程分支建立联系，需要执行以下代码就可以正常push了：
