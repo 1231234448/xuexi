@@ -109,8 +109,10 @@ git push -u origin "master"
 
 当前仓库配置信息：
 $ git remote -v
-删除仓库配置信息
+删除远端仓库
 $git remote remove github
+重命名仓库远端仓库
+git remote rename gttis origin
 添加仓库 指定代码仓库的别名
 $ git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
 fetch命令拉取新仓库的元数据信息（分支、标签等）
