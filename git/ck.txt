@@ -55,6 +55,7 @@ git remote -v
 git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
 拉取新仓库的数据
 git fetch origin
+git add .
 查看状态
 git status
 提交代码到本地缓冲区
@@ -62,7 +63,7 @@ git commit -a -m 'for testing'
 推送
 git push
 git push github
-$ git push -u github "main"
+git push -u github "main"
 }
 
 
