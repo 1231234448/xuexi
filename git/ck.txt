@@ -8,7 +8,8 @@ git status // 查看文件状态
 git commit -m "本次要提交的概要信息" // 提交
 
 克隆目录、下载
-git clone git@gitee.com:liu-yu-mitumao/ceshi.git
+git remote add origin git@gitee.com:liu-yu-mitumao/work.git
+git remote add origin git@gitee.com:liu-yu-mitumao/study.git
 
 没有线上仓库的情况
 mkdir ceshi
@@ -17,55 +18,77 @@ git init
 touch README.md
 git add README.md
 git commit -m "first commit"
-git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
+git remote add origin git@gitee.com:liu-yu-mitumao/work.git
+git remote add origin git@gitee.com:liu-yu-mitumao/study.git
 git push -u origin "master"
 
 已有线上仓库的情况
 cd existing_git_repo
-git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
+git remote add origin git@gitee.com:liu-yu-mitumao/work.git
+git remote add origin git@gitee.com:liu-yu-mitumao/study.git
 git push -u origin "master"
-
-
-当前仓库配置信息：
-$ git remote -v
-
-删除仓库配置信息
-$git remote remove origin
-
-添加仓库 指定代码仓库的别名
-$ git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
-
-fetch命令拉取新仓库的元数据信息（分支、标签等）
-$ git fetch gttis
-
-提交代码到本地缓冲区
-$ git commit -a -m 'for testing'
-
-将代码推到仓库
-$ git push
 
 {
 多仓库管理及代码同步
 同步git
 手动打开 bush
-
-当前仓库配置信息：
-git remote -v
-添加仓库 指定代码仓库的别名
-git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
-拉取新仓库的数据
-git fetch origin
-git add .
-查看状态
-git status
-提交代码到本地缓冲区
-git commit -a -m 'for testing'
-推送
-git push
-git push github
-git push -u github "main"
+        第一种方式：
+    当前仓库配置信息：
+    git remote -v
+    添加仓库 指定代码仓库的别名
+    git remote add github git@github.com:1231234448/xuexi.git
+    git remote add github git@github.com:1231234448/gongzuo.git
+    拉取新仓库的数据
+    git fetch origin
+    git add .
+    查看状态
+    git status  
+    提交代码到本地缓冲区
+    git commit -a -m '更新'
+    查看状态
+    git status
+    推送
+    git push
+    git push github
+    git push -u github "main"
+        第二种方式：
+    当前仓库配置信息：
+    git remote -v
+    origin 追加仓库
+    git remote set-url --add origin git@github.com:1231234448/xuexi.git
+    git remote set-url --add origin git@github.com:1231234448/gongzuo.git
+    添加仓库 指定代码仓库的别名
+    git remote add github git@github.com:1231234448/xuexi.git
+    git remote add github git@github.com:1231234448/gongzuo.git
+    查看状态
+    git status
+    拉取新仓库的数据
+    git fetch origin
+    git add .
+    提交代码到本地缓冲区
+    git commit -a -m '更新'
+    查看状态
+    git status
+    推送
+    git push
+    git push github
+    git push -u github "main"
 }
 
+
+
+当前仓库配置信息：
+$ git remote -v
+删除仓库配置信息
+$git remote remove github
+添加仓库 指定代码仓库的别名
+$ git remote add origin git@gitee.com:liu-yu-mitumao/ceshi.git
+fetch命令拉取新仓库的元数据信息（分支、标签等）
+$ git fetch gttis
+提交代码到本地缓冲区
+$ git commit -a -m 'for testing'
+将代码推到仓库
+$ git push
 
 git push --set-upstream origin master的原因以及解决方法
 这是因为本地的分支没有和远程分支建立联系，需要执行以下代码就可以正常push了：
