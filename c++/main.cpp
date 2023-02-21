@@ -1,37 +1,16 @@
-
 #include<iostream>
-
 using namespace std;
 
-int main()
-
-{
-
-int qiuhe(int x);
-
-int n,s=0;
-
-cout<<"请输入一个整数"<<endl;
-
-cin>>n;
-
-s=qiuhe(n);
-
-cout<<s<<endl;
-
+int main(){
+	int b;
+for (int i = 1; i <= 5; i++) {
+		int j = 1 * i - 1;
+		for (int a = 1; a <= j; a++) {
+			cout << b << " ";
+			b++;
+		}
+		cout << endl;
+	}
+return 0;
 }
-
-int qiuhe(int x)
-
-{
-
-    int sum=0;
-
-    for(int i=0;i<=x;i++)
-
-    sum+=i*i;
-
-    return sum;
-
-}
-
+A
