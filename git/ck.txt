@@ -7,7 +7,7 @@
     git status
     git commit -a -m '更新'
     git push github
-    git push origin
+    git push origin 
     
 克隆目录、下载
     git remote add origin git@gitee.com:liu-yu-mitumao/work.git
@@ -144,3 +144,19 @@
  failed to push some refs to的解决办法
     远程库同步到本地库
         git pull --rebase github main
+ windows平台进行 git add 时，控制台打印警告warning: in the working copy of ‘XXX.py’, LF will be replaced by CRLF the next time Git touches it
+         #提交时转换为LF，检出时转换为CRLF
+         git config --global core.autocrlf true
+         *适用于Windows系统
+         git config --global core.autocrlf input
+         *适用于Linux系统
+         git config --global core.autocrlf false
+         *适用于Windows系统，且只在Windows上开发的情况
+         #拒绝提交包含混合换行符的文件
+         git config --global core.safecrlf true
+         #允许提交包含混合换行符的文件
+         git config --global core.safecrlf false
+         #提交包含混合换行符的文件时给出警告
+         git config --global core.safecrlf warn
+
+
