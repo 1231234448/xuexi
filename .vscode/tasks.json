@@ -19,6 +19,7 @@
                 "-Wno-format",
                 "-fexec-charset=GBK",
                 "-finput-charset=GBK"
+                
             ],
             "group": "build"
         },
