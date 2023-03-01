@@ -21,7 +21,8 @@
     git add README.md
     git commit -m "first commit"
     git remote add origin git@gitee.com:liu-yu-mitumao/work.git
-    git remote add origin git@gitee.com:liu-yu-mitumao/study.git
+    git remote add github git@github.com:liu-yu-mitumao/study.git
+    git branch -M main
     git push -u origin "master"
 
 已有线上仓库的情况
@@ -158,5 +159,6 @@
          git config --global core.safecrlf false
          #提交包含混合换行符的文件时给出警告
          git config --global core.safecrlf warn
+
 
 
