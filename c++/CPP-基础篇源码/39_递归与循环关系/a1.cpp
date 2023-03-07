@@ -21,11 +21,11 @@ char* mystrstr(char* buf, char* s)
     if(*s=='\0') return buf;
     if(*buf=='\0') return NULL;
     if(mystrstarts(buf, s)) return buf;
-    return mystrstr(buf+1,s);
+    return mystrstr(buf,s);
 }
 
 int main()
 {
-    cout << mystrstr("abc123defg12345xyz", "1234") << endl;
+    cout << mystrstr("abc123defg12345xyz", ";';") << endl;
     return 0;
 }
