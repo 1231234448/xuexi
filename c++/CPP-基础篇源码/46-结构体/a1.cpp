@@ -22,7 +22,7 @@ void f(Point* t)
 int main()
 {
     Point a = Point{3,5};  //字面量生成“立即数”
-    Point b = {10,20};  // 类似数组赋初值
+    Point b = Point{10,20};  // 类似数组赋初值
     Point c = a;  // 拷贝每个成员的意思
     f(&a);
     show(a);
