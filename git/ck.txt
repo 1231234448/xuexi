@@ -5,7 +5,7 @@
 每天操作
     git add .
     git status
-    git commit -a -m '每周更新'
+    git commit -a -m '更新'
     git push github
     git push origin 
     
