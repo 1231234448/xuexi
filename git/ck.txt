@@ -140,7 +140,7 @@
 问题
  git push --set-upstream origin master的原因以及解决方法
     这是因为本地的分支没有和远程分支建立联系，需要执行以下代码就可以正常push了：
-        git push --set-upstream origin master
+        git push -c-set-upstream origin master
 
  fatal: Could not read from remote repository.的解决办法
     查看远端地址 git remote –v 
@@ -180,3 +180,5 @@
          git config http.postBuffer 5242880003
     此外还可以尝试更新DNS缓存。在CMD中输入以下命令：
          ipconfig /flushdns
+git clone/pull/push时使用https,SSL certificate problem: unable to get local issuer certificate,git切换地址
+      git config --global http.sslVerify false
