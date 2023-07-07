@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "study",
+			"path": "."
+		},
+		{
+			"name": "work",
+			"path": "../work"
+		},
+		{
+			"name": "dissertation",
+			"path": "../../xuexi/dissertation"
+		}
+	],
+	"settings": {
+		"c-cpp-compile-run.run-in-external-terminal": true
+	}
+}

@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>win-xp/7.ico</file>
+        <file>win-xp/8.ico</file>
+        <file>win-xp/9.ico</file>
+        <file>win-xp/52.ico</file>
+        <file>win-xp/53.ico</file>
+        <file>win-xp/54.ico</file>
+        <file>win-xp/37.ico</file>
+        <file>win-xp/38.ico</file>
+        <file>win-xp/39.ico</file>
+        <file>win-xp/40.ico</file>
+    </qresource>
+    <qresource prefix="/new/prefix2"/>
+</RCC>
