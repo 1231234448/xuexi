@@ -1,12 +1,51 @@
 #include <iostream>
+
 using namespace std;
 
-int main() {
-    int a = 10;     // 定义一个整数变量a
-    int* ptr = &a;  // 定义一个指向整数的指针ptr，并将a的地址赋值给ptr
+class LinkNode{
+public:
+    int data;
+    LinkNode* next;
+    void add(LinkNode* it){
+        it->next = next;
+        next = it;
+    }
+    void clear(){
+        if(next==NULL) return;
+        next->clear();
+        delete next;
+        next = NULL;
+    }
+    void show(){
+        cout << data << " ";
+        if(next) next->show();
+    }
+    LinkNode copy();  // 娣卞害鎷疯礉
+    LinkNode* f(){ LinkNode x; return &x; }
+};
 
-    cout << a << endl;    // 输出a的值，输出结果为10
-    cout << *ptr << endl; // 输出通过指针访问的值，输出结果也为10
 
+LinkNode LinkNode::copy()
+{
+    LinkNode t = {data, NULL};
+    LinkNode* p = next;
+    LinkNode* q = &t;
+    while(p){
+        q->next = new LinkNode{p->data, NULL};
+        p = p->next;
+        q = q->next;
+    }
+    return t;
+}
+
+int main()
+{
+    LinkNode a = {-1,NULL};
+    for(int i=9; i>=1; i--) a.add(new
+              LinkNode{i,NULL});
+    LinkNode b = a;
+    a.show(); cout << endl;
+    a.clear();
+    a.show(); cout << endl;
     return 0;
 }

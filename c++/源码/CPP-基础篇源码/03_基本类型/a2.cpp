@@ -1,13 +1,15 @@
 #include <iostream>
 #include <limits>
+#include <math.h>
 using namespace std;
 
 
 int main()
 {
-    cout << std::numeric_limits<int>::max() << endl;
-    cout << std::numeric_limits<unsigned>::max() << endl;
-    cout << std::numeric_limits<long long int>::max() << endl;
+    unsigned long long a =std::numeric_limits<long long int>::max();
+    cout << a << endl;
+    cout << log10(a) << endl;
+    
 
     return 0;
 }
