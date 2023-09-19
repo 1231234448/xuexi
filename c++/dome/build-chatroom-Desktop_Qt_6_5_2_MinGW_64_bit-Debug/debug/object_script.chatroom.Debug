@@ -1,0 +1,10 @@
+debug/logindialog.o
+debug/main.o
+debug/mainwindow.o
+debug/mysocket.o
+debug/netdialog.o
+debug/registerdialog.o
+debug/moc_logindialog.o
+debug/moc_mainwindow.o
+debug/moc_netdialog.o
+debug/moc_registerdialog.o
